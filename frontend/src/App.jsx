@@ -89,7 +89,7 @@ export default function App() {
     if (!f) return 'No file selected.';
     if (!f.name.endsWith('.csv')) return 'Invalid file type. Please upload a CSV (.csv) file.';
     if (f.size === 0) return 'The file is empty. Please upload a CSV file with data.';
-    if (f.size > 50 * 1024 * 1024) return 'File is too large (max 50MB).';
+    if (f.size > 500 * 1024 * 1024) return 'File is too large (max 500MB).';
     return null;
   };
 
@@ -361,7 +361,7 @@ export default function App() {
                 />
                 <span className="upload-icon">☁️</span>
                 <h3>Drag & drop your CSV file here</h3>
-                <p>or click to browse files (max 50 MB)</p>
+                <p>or click to browse files (max 500 MB)</p>
               </div>
               {file && (
                 <div className="file-info">
